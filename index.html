@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <title>Orbit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Css/main.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <style>
+      /* The Modal (background) */
+      .modal {
+        position: absolute; /* Stay in place */
+        z-index: 29; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        top: 0;
+        bottom:0;
+        margin-top:auto;
+        margin-bottom:auto;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        display:none;
+      }
+      .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 400px;
+        height: 400px;
+        box-shadow: 0 400px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+      }
+      @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+      }
+      @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+      }
+    </style>
+
+    <style>
+      .stars{width: 100%;
+             height: 100%;
+             background:#000110 url(Img/stars.png) repeat top center; }
+      .twinkling{
+        background:transparent url(Img/twinkling.png) repeat top center;
+        z-index:1;
+        animation:move-twink-back 200s linear infinite;
+      }
+      @keyframes move-twink-back {
+        from {background-position:0 0;}
+        to {background-position:-10000px 5000px;}
+      }
+      .stars, .twinkling, .clouds {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1280px;
+        height: 720px;
+        display: block;
+        z-index: 1;
+      }
+      .clouds{background: url(Img/clouds12.png); }
+    </style>
+
+    <style>
+      #div1{position: absolute;top:0px;left:0px; width: 30px;height: 30px;background:url(Img/hls.png); background-size:cover; z-index: 100;}
+      #div1:hover{transform:scale(1.02);}
+    </style>
+
+    <script>
+      function fullScreen() {
+        parent.toggleFullScreen();
+      }
+    </script>
+
+    <script src="Script/tweenmax/TweenMax.min.js"></script>
+    <script src="Script/tweenmax/easing/EasePack.min.js"></script>
+    <script src="Script/tweenmax/utils/Draggable.min.js"></script> 
+    <script src="Script/jquery-1.12.3.js"></script>
+    <script src="Script/jquery-ui.js"></script>
+    <script src="Script/jumble.js"></script>
+    <script src="Script/jquery.corner.js"></script> 
+    <script src="Script/orbit/Fabric/dist/fabric.js"></script>
+    <script src="Script/main.js"></script>
+
+    <div id="main">
+
+      <img src="Img/orbit/1-19.png" id="uydu" width="59"  height="77 "style="position: absolute; top: 0px; margin-left:650px; margin-top: 30px; z-index: 30;">
+      <img src="Img/orbit/1-20.png" id="meteor3" width="55" height="56" style="position: absolute; bottom: 0px; margin-left:1180px; margin-bottom: 30px; z-index: 5;">
+      <img src="Img/clouds2123.png" height="721" width="312" style="z-index: 6; margin-top: auto; margin-left: 0px; margin-right: auto; margin-bottom: auto; position: absolute;">
+      <div id="galaxy">
+        <img src="Img/orbit/1-10.png" id="orbit" width="652" height="652" style="position:absolute; margin-left: auto; margin-top: auto; margin-bottom: auto; margin-right: auto; top:0 ;left:0 ;right:0 ;bottom:0; z-index: 5;opacity: 0.5;">
+        <div id="sun"></div>
+        <div id="sunt"></div>
+        <div id="ship"></div>
+        <div id="ship1"></div>
+        <div id="star1"></div>
+        <div id="star1f"></div>
+        <div id="star2"></div>
+        <div id="star2f"></div>
+        <div id="star3"></div>
+        <div id="star3f"></div>
+        <div id="black"></div>
+        <div id="Suns"></div>
+        <div id="mer"></div>
+        <div id="Mercur"></div>
+        <div id="mercury"></div>
+        <div id="ven" ></div>
+        <div id="Venu"></div>
+        <div id="venus"></div>
+        <div id="ear"></div>
+        <div id="Eart"></div>
+        <div id="earth"></div>
+        <div id="mar"></div>
+        <div id="Mara"></div>
+        <div id="mars"></div>
+        <div id="jup"></div>
+        <div id="Jupit" ></div>
+        <div id="jupiter" ></div>
+        <div id="sat" ></div>
+        <div id="Satur" ></div>
+        <div id="saturn" ></div>
+        <div id="ura" ></div>
+        <div id="Uran" ></div>
+        <div id="uranus" ></div>
+        <div id="nep"></div>
+        <div id="Neptu"></div>
+        <div id="neptune"></div>
+      </div>
+      <div id="planet">
+        <div id="title">Güneş Sistemi</div>
+        <div id="info"></div>
+        <div id="buttons">
+          <div id="selects">
+            <img src="Img/buttons/1gun.png" id="dayBtn" height="60" width="130" style="opacity:0.8">
+            <img src="Img/buttons/1ay.png" id="monthBtn" height="60" width="130" style="opacity:0.8">
+            <img src="Img/buttons/6ay.png" id="sixMonthBtn" height="60" width="130" style="opacity:0.8">
+            <img src="Img/buttons/1yil.png" id="yearBtn" height="60" width="130" style="opacity:0.8">
+          </div>
+        </div>
+
+        <img src="Img/buttons/buttons.png" id="backg" style="position:absolute; height: 160px; width: 812px; margin-top: 562px; z-index: 22;">
+        <img src="Img/clouds123.png" width="239" height="719" style="z-index:21; margin-top:1px; margin-left:-1px; margin-bottom:auto; position:absolute; top:0; left:0; bottom:0; right:0;"> 
+      </div>
+
+      <div id="playPause">
+        <img src="Img/buttons/pause.png" id="pauseBtn" style="height:150px; width:230px; opacity:0.8; " >
+        <img src="Img/buttons/play.png" id="playBtn" style="height:150px; width:230px; opacity:0.8; " >
+      </div>
+
+      <div id="div1" onClick="fullScreen();"></div>
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+      <div class="clouds"></div>
+
+
+      <h2>Animated Modal with Header and Footer</h2>
+
+      <div id="myModal" class="modal">
+
+        <div class="modal-content">
+          <div class="modal-header">
+          </div>
+        </div>
+        </body>
+        </html>

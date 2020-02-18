@@ -1,0 +1,690 @@
+@font-face {
+  font-family: 'sab1';
+  src: url('font/CLEANVEL.TTF');
+  src: local('Sab1'), local('sab1'), url('../font/CLEANVEL.TTF') format('truetype');
+}  
+body
+{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#main
+{
+  height: 720px;
+  width: 1280px;
+  position: absolute;
+  background-color: #000110;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-top: auto;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+}
+#ship
+{
+  background: url("../Img/RocketAA.png");
+  width:300px;
+  height:260px; 
+  position: absolute; 
+  left: -739px; 
+  bottom:-121px; 
+  z-index: 20;
+  opacity:0.8;
+}
+#ship1
+{
+  background: url("../Img/RocketAA.png");
+  width:300px;
+  height:260px; 
+  position: absolute; 
+  left: 680px; 
+  bottom:121px; 
+  z-index: 10;
+  transform: rotate(-138deg);
+  opacity: 0.5;
+}
+#galaxy
+{
+  height: 720px;
+  width: 670px;
+  position: absolute;
+  margin-left: 600px;
+}
+#planet
+{
+  height: 700px;
+  width: 600px;
+
+  position:absolute;
+}
+#title
+{
+  height: 100px;
+  width: 300px;
+  margin-top: 65px;
+  margin-left:350px;
+  position:absolute;
+  z-index: 5;
+  font-family: "sab1";
+  line-height: 20px;
+  font-size: 35px;
+  font-style: normal;
+  font-stretch: normal;
+  color: #fff;
+  padding-left:  8px;
+}
+#info 
+{
+  height: 430px;
+  width: 254px;
+  position:absolute;
+  margin-top:118px;
+  margin-left:350px;
+  background-size: cover;
+  font-family: "sab1";
+  line-height: 20px;
+  font-size: 18px;
+  font-style: normal;
+  font-stretch: normal;
+  color: #fff;
+  padding-left:  8px;
+  z-index: 10;
+}
+#buttons
+{
+  height: 19px;
+  width: 8px;
+  margin-top: 570px;
+  margin-left: 370px;
+  position: absolute;
+  z-index: 25;
+}
+#selects
+{
+  height: 66px;
+  width: 536px;
+  margin-left: -260px;
+  margin-top: -19px;
+  position: absolute;
+  z-index: 23;
+}
+#playPause
+{ 
+  height: 77px;
+  width: 483px;
+  margin-left: 155px;
+  margin-top: 608px;
+  z-index: 22;
+  position: absolute;
+}
+#sun
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  background:url(../Img/sun3.png) ;
+  z-index: 11;
+}
+#sunt
+{
+  margin-bottom: auto;
+  margin-top: 310px;
+  margin-right: 340px;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 44px;
+  height: 51px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/sun-01.png) ;
+  background-size: cover;
+  display:none;
+}
+#Suns
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/Suns.png) ;
+  z-index: 9;
+  display:none;
+}
+#star1
+{ 
+  background:url("../Img/comets.png"); 
+  position: absolute; 
+  top: 0px; 
+  margin-left:-200px; 
+  margin-top: -120px; 
+  z-index: 5; 
+  height: 175px; 
+  width: 200px;
+}
+#star1f
+{ 
+  background:url("../Img/comets_fall.png"); 
+  position: absolute; 
+  top: 0px; 
+  margin-left:-200px; 
+  margin-top: -120px; 
+  z-index: 5; 
+  height: 175px; 
+  width: 200px;
+  display:none;
+}
+#star2
+{ 
+  background:url("../Img/comets.png"); 
+  position: absolute; 
+  top: 0px; 
+  margin-left:550px; 
+  margin-top: 10px; 
+  z-index: 5; 
+  height: 175px; 
+  width: 200px;
+}
+#star2f
+{ 
+  background:url("../Img/comets_fall.png"); 
+  position: absolute; 
+  top: 0px; 
+  margin-left:550px; 
+  margin-top: 10px; 
+  z-index: 5; 
+  height: 175px; 
+  width: 200px;
+  display:none;
+}
+#star3
+{ 
+  background:url("../Img/comets.png"); 
+  position: absolute; 
+  top: 0px; 
+  margin-left:400px; 
+  margin-top: 400px; 
+  z-index: 5; 
+  height: 175px; 
+  width: 200px;
+}
+#star3f
+{ 
+  background:url("../Img/comets_fall.png"); 
+  position: absolute; 
+  top: 0px; 
+  margin-left:400px; 
+  margin-top: 400px; 
+  z-index: 5; 
+  height: 175px; 
+  width: 200px;
+  display:none;
+}
+#black
+{
+  margin-bottom: auto;
+  margin-top: -90px;
+  margin-right: auto;
+  margin-left: -690px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background:url(../Img/4pgA.png) ;
+  z-index: 9;
+  opacity: 0.3;
+}
+#Mercur
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/mercure.png) ;
+  z-index: 9;
+  display:none;
+}
+#mercury
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 16;   
+  background-image: url(../Img/orbit/1-22.png) ;
+  background-size: cover;
+  cursor: pointer;
+}
+#mer
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 56px;
+  height: 53px;
+  z-index: 15;   
+  background-image: url(../Img/orbit/1-18.png) ;
+  background-size: cover;
+  display:none;
+}
+#Venu
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/Venus.png) ;
+  z-index: 9;
+  display:none;
+}
+#venus
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  z-index: 5;      
+  background-image: url(../Img/orbit/1-23.png) ;    
+  cursor: pointer;  
+  background-size: cover;  
+  border-radius: 50%;
+}
+#ven
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 56px;
+  height: 37px;
+  z-index: 18;   
+  background-image: url(../Img/orbit/1-17.png) ;
+  background-size: cover;
+  display:none;
+}
+#Eart
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/earth.png) ;
+  z-index: 9;
+  display:none;
+}
+#earth
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 36px;
+  height: 38px;
+  z-index: 16;     
+  background-image: url(../Img/orbit/1-24.png) ;
+  cursor: pointer; 
+  background-size: cover;
+  border-radius: 50%;
+}
+#ear
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 57px;
+  height: 33px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/1-16.png) ;
+  background-size: cover;
+  display:none;
+}
+#Mara
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/mars.png) ;
+  z-index: 9;
+  display:none;
+}
+#mars
+{ 
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 30px;
+  height: 31px;
+  z-index: 16;       
+  background-image: url(../Img/orbit/1-25.png) ;   
+  background-size: cover;
+  cursor: pointer;   
+  border-radius: 50%;
+}
+#mar
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 48px;
+  height: 26px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/1-15.png) ;
+  background-size: cover;
+  display:none;
+}
+#Jupit
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/Jupiter.png) ;
+  z-index: 9;
+  display:none;
+}
+#jupiter
+{ 
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 39px;
+  height: 40px;
+  z-index: 16;      
+  background-image: url(../Img/orbit/1-26.png) ;  
+  background-size: cover;
+  cursor: pointer; 
+  border-radius: 50%;
+}
+#jup
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 75px;
+  height: 33px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/1-14.png) ;
+  background-size: cover;
+  display:none;
+}
+#Satur
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 950px;
+  height: 450px;
+  background:url(../Img/Saturne.png) ;
+  z-index: 9;
+  display:none;
+}
+#saturn
+{ 
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 56px;
+  height: 34px;
+  z-index: 16;   
+  background-image: url(../Img/orbit/1-27.png) ; 
+  background-size: cover;
+  cursor: pointer; 
+}
+#sat
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 71px;
+  height: 30px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/1-13.png) ;
+  background-size: cover;
+  display:none;
+}
+#Uran
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 850px;
+  height: 450px;
+  background:url(../Img/Uranus.png) ;
+  z-index: 9;
+  display:none;
+}
+#uranus
+{ 
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 52px;
+  height: 25px;
+  z-index: 16;      
+  background-image: url(../Img/orbit/1-28.png) ;
+  background-size: cover;
+  cursor: pointer; 
+  border-radius: 50%;
+}
+#ura
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 72px;
+  height: 26px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/1-12.png) ;
+  background-size: cover;
+  display:none;
+}
+#Neptu
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background:url(../Img/Neptune.png) ;
+  z-index: 9;
+  display:none;
+}
+#neptune
+{ 
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 21px;
+  height: 22px;
+  z-index: 16;      
+  background-image: url(../Img/orbit/1-29.png) ;  
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#nep
+{
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: auto;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px; 
+  position: absolute;
+  width: 86px;
+  height: 30px;
+  z-index: 17;   
+  background-image: url(../Img/orbit/1-11.png) ;
+  background-size: cover;
+  display:none;
+}
